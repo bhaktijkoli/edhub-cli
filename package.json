@@ -3,8 +3,11 @@
   "version": "0.0.0-development",
   "description": "Scaleground Cli",
   "main": "src/index.js",
+  "bin": {
+    "edhub": "src/index.js"
+  },
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "node src/index.js",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.js\" --write",
     "fix:lint": "eslint src --ext .js --fix",
