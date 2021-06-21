@@ -1,0 +1,47 @@
+{
+  "name": "edhub-cli",
+  "version": "0.0.0-development",
+  "description": "Scaleground Cli",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.js\" --write",
+    "fix:lint": "eslint src --ext .js --fix",
+    "test": "run-s build test:*",
+    "test:lint": "eslint src --ext .js",
+    "test:prettier": "prettier \"src/**/*.js\" --check",
+    "prepare": "husky install",
+    "commit": "git add . && git cz --disable-emoji"
+  },
+  "keywords": [
+    "edhub",
+    "cli"
+  ],
+  "author": "Bhaktij Koli",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "git-cz": "^4.7.6",
+    "husky": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "commander": "^7.2.0"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhaktijkoli/edhub-cli.git"
+  }
+}
